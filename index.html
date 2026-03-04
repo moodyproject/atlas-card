@@ -225,13 +225,11 @@ var ctx = canvas.getContext('2d');
 ctx.fillStyle = '#faf8f4';
 ctx.fillRect(0, 0, size, size);
 
-for (var r = 0; r < qr.moduleCount; r++) {
-  for (var c = 0; c < qr.moduleCount; c++) {
-    if (qr.modules[r][c]) {
+for (var row = 0; row < qr.moduleCount; row++) {
+  for (var col = 0; col < qr.moduleCount; col++) {
+    if (qr.modules[row][col]) {
       ctx.fillStyle = '#2c2c2c';
-      ctx.beginPath();
-      ctx.roundRect(c * cellSize, r * cellSize, cellSize + 0.5, cellSize + 0.5, 1);
-      ctx.fill();
+      ctx.fillRect(col * cellSize, row * cellSize, cellSize + 0.5, cellSize + 0.5);
     }
   }
 }
