@@ -216,6 +216,7 @@ document.getElementById('saveContact').addEventListener('click', function(ev) {
   var vcard = [
     'BEGIN:VCARD',
     'VERSION:3.0',
+    'N:;Moud;;;',
     'FN:Moud',
     'ORG:Atlas',
     'TITLE:Websites & AI for Local Business',
@@ -228,7 +229,7 @@ document.getElementById('saveContact').addEventListener('click', function(ev) {
   var url = URL.createObjectURL(blob);
   var a = document.createElement('a');
   a.href = url;
-  a.download = 'Moud-Atlas.vcf';
+  a.download = 'Moud.vcf';
   a.click();
   URL.revokeObjectURL(url);
 });
